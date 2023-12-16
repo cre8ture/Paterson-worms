@@ -7,14 +7,31 @@
 <body>
     <div id="asciiContainer"></div>
     <div id="explain" >
-        <h3>Langton's ants</h3>
-        <code>emergent behavio</code>
+        <h3>Paterson's Worms</h3>
+        <code>emergent behavior</code>
         <code id="time"></code>
         <code id="fps"></code>
         <code id="frame"></code>
         <code id="alive"></code>
         <code id="matrix"></code>
         </div>
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+            <defs>
+              <filter id="filter1">
+                <feTurbulence type="fractalNoise" baseFrequency="0.01" numOctaves="1" result="warp" />
+                <feDisplacementMap xChannelSelector="R" yChannelSelector="G" scale="30" in="SourceGraphic" in2="warp" />
+              </filter>
+              <filter id="filter2">
+                <feTurbulence type="fractalNoise" baseFrequency="0.02" numOctaves="1" result="warp" />
+                <feDisplacementMap xChannelSelector="R" yChannelSelector="G" scale="30" in="SourceGraphic" in2="warp" />
+              </filter>
+              <filter id="filter3">
+                <feTurbulence type="fractalNoise" baseFrequency="0.03" numOctaves="1" result="warp" />
+                <feDisplacementMap xChannelSelector="R" yChannelSelector="G" scale="30" in="SourceGraphic" in2="warp" />
+              </filter>
+            </defs>
+          </svg>
+        
  
 </body>
 <script src="app2.js"></script>

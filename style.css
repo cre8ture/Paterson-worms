@@ -27,7 +27,6 @@ body{
 
   
 #explain{
-
   padding: 5px;
   max-width: 450px;
   position: absolute;
@@ -38,6 +37,7 @@ body{
   right: 15px;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
   border: solid 1px #000;
+
   /* border-radius: 15%; */
 }
 
@@ -45,4 +45,22 @@ body{
   font-size: 5px; 
   word-spacing: 0.5px;  
   line-height: 1em;  
+}
+@keyframes blob {
+  0% {
+    filter: url(#filter1);
+  }
+  33% {
+    filter: url(#filter2);
+  }
+  66% {
+    filter: url(#filter3);
+  }
+  100% {
+    filter: url(#filter1);
+  }
+}
+
+#explain {
+  animation: blob 5s infinite;
 }
